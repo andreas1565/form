@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+    <form onSubmit="return valider(this)" class="sell"> 
+    <input type="text" class="text" name="shopname" placeholder="butiksnavn">
+   
+    <input type="text" class="text" name="slogan" placeholder="Slogan">
+
+    <section>
+        <select name="tema">
+            <option value="0">vælg et Tema</option>
+            <option value="1">BRANDstore</option>
+            <option value="2">REASONstore</option>
+            <option value="3">INSPIREstore</option>
+            <option value="4">LICENSstore</option>
+            <option value="5">STANDARDStore</option>
+        </select>
+        
+        <select name="fragt">
+            <option value="0">vælgt fragt</option>
+            <option value="1">Shopivers fragt</option>
+            <option value="2"> egen fragtaftale</option>
+            <option value="3">Afhentning</option>
+            <option value="4">Andet</option>
+        </select>
+       </section>
+    <section>
+        <fieldset>
+            <legend>B2C eller B2B</legend>
+                <label class="container">B2C
+                        <input type="checkbox" class="b2b&b2b">
+                        <span class="checkmark"></span>
+                </label>
+                <label class="container">B2B
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                </label>
+        </fieldset>
+        <fieldset class="Leveringstider">
+        <legend>Leveringstider</legend>
+       
+        <label class="container">1-3 dage
+                <input type="checkbox">
+                <span class="checkmark"></span>
+        </label>
+        <label class="container">3-5 dage
+                <input type="checkbox">
+                <span class="checkmark"></span>
+        </label>
+        <label class="container">4-5dage
+                <input type="checkbox">
+                <span class="checkmark"></span>
+        </label>
+        <label class="container">5-8 dage
+                <input type="checkbox">
+                <span class="checkmark"></span>
+        </label>
+        <label class="container">Over 8 dage
+                <input type="checkbox">
+                <span class="checkmark"></span>
+        </label>
+        </fieldset>
+    </section>
+    <div>
+       
+        <label id="extra" class="container checkboxcontainer ">Vælg et ekstra tema
+                <input type="checkbox">
+                <span class="checkmark checkja check"></span>
+        </label>
+        <input type="text" class="extra-tema " name="extra-tema" placeholder="Vælg et ekstra tema">
+      
+        <label id="specialmoduler" class="container">Specialmoduler
+                <input type="checkbox">
+                <span class="checkmark checkboxspecialmoduler check"></span>
+        </label>
+        <input type="text" class="specialmoduler " name="specialmoduler" placeholder="Specialmoduler">
+    </div>
+    <div id="pay">
+        <label  for="">betal med kontant eller kort</label> <span></span>
+        
+        <label class="container2">
+                <input type="radio"  name="radio">
+                <span class="checkmark2"></span>
+                <img src="./img/kontant.jpg" alt="kontant" width="50px">
+              </label>
+      
+        <label class="container2">
+                <input type="radio"  name="radio">
+                <span class="checkmark2"></span>
+                <img src="./img/visa.png" alt="kontant" width="50px">
+              </label>
+        <label class="container2">
+                <input type="radio"  name="radio">
+                <span class="checkmark2"></span>
+                <img src="./img/maestro.png" alt="kontant" width="50px">
+              </label> 
+    </div>
+    <p role="alert" aria-live="polite" class="message"></p>
+    <button type="submit">send</button>
+    </form>
+    <script src="main.js"></script>
+</body>
+</html>
